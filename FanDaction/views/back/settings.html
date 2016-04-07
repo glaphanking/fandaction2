@@ -1,0 +1,87 @@
+﻿<div id="wrapper wrapper-content">
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Admins</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="main.html">Home</a>
+                </li>
+                <li class="active">
+                    <strong>Settings</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+    <div class="wrapper wrapper-content">
+        <div class="animated fadeInRight" ng-controller="settingsCtlr as vm">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox-title">
+                        <h5>Admin Directory</h5>
+                        <div class="text-right"></div>
+                        <div ibox-tools></div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-9 m-b-xs">
+
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+                                <thead>
+                                    <tr>
+                                        <th data-toggle="true">Name</th>
+                                        <th data-toggle="true">Description</th>
+                                        <th data-toggle="true">Auth Model</th>
+                                        <th data-toggle="true">Factor</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="setting in vm.settings" ng-class="{'footable-even':$even,'footable-odd':$odd}">
+                                        <td ng-bind="setting.name" class="footable-visible"></td>
+                                        <td ng-bind="setting.description"></td>
+                                        <td ng-bind="setting.authmodel"></td>
+                                        <td ng-bind="setting.fantasstockfactor"></td>
+                                        <td>
+                                            <div class="col-md-6 col-sm-6">
+                                                <a ng-click="vm.editSetting(setting)"><i class="fa fa-pencil"></i></a>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <i class="fa fa-trash"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4">
+                                            <table>
+                                                <tr>
+                                                    <td><span>Name:</span><span><input type="text" name="name" size="30" /></span></td>
+                                                    <td><span>Description:</span><span><input type="text" name="description" size="30" /></span></td>
+                                                    <td><a ng-click="vm.addSetting"><i class="fa fa-plus fa-2x"></i></a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

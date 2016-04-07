@@ -1,0 +1,110 @@
+﻿<!-- Wrapper-->
+<div id="wrapper wrapper-content">
+
+
+    <!-- Main view  -->
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-10">
+            <h2>Admins</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="main.html">Home</a>
+                </li>
+                <li class="active">
+                    <strong>Admin Manager</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+
+    <div class="wrapper wrapper-content">
+        <div class="animated fadeInRight" ng-controller="adminListCtrl as vm">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox-title">
+                        <h5>Admin Directory</h5>
+                        <div class="text-right"></div>
+                        <div ibox-tools></div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-9 m-b-xs">
+                                <div data-toggle="buttons" class="btn-group">
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('a'), activeSearch:vm.hasResult('a')}" ng-click="vm.showAdmin('a')"> <input type="radio" id="option1" name="options"> A </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('b'), activeSearch:vm.hasResult('b')}" ng-click="vm.showAdmin('b')"> <input type="radio" id="option2" name="options"> B </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('c'), activeSearch:vm.hasResult('c')}" ng-click="vm.showAdmin('c')"> <input type="radio" id="option3" name="options"> C </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('d'), activeSearch:vm.hasResult('d')}" ng-click="vm.showAdmin('d')"> <input type="radio" id="option4" name="options"> D </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('e'), activeSearch:vm.hasResult('e')}" ng-click="vm.showAdmin('e')"> <input type="radio" id="option5" name="options"> E </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('f'), activeSearch:vm.hasResult('f')}" ng-click="vm.showAdmin('f')"> <input type="radio" id="option6" name="options"> F </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('g'), activeSearch:vm.hasResult('g')}" ng-click="vm.showAdmin('g')"> <input type="radio" id="option7" name="options"> G </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('h'), activeSearch:vm.hasResult('h')}" ng-click="vm.showAdmin('h')"> <input type="radio" id="option7" name="options"> H </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('i'), activeSearch:vm.hasResult('i')}" ng-click="vm.showAdmin('i')"> <input type="radio" id="option7" name="options"> I </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('j'), activeSearch:vm.hasResult('j')}" ng-click="vm.showAdmin('j')"> <input type="radio" id="option7" name="options"> J </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> K </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> L </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> M </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> N </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> O </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> P </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> Q </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> R </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> S </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> T </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> U </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> V </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> W </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> X </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> Y </label>
+                                    <label class="btn btn-md btn-white" ng-class="{active:vm.isActive('k'), activeSearch:vm.hasResult('k')}" ng-click="vm.showAdmin('k')"> <input type="radio" id="option7" name="options"> Z </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" placeholder="Search" class="input-sm form-control" ng-model="vm.searchText" ng-keyup="($event.keyCode == 13 && vm.shopSearch() || $event.keyCode == 27 && vm.resetSearch())"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary" ng-click="vm.adminSearch()"> Go!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <label ng-bind="vm.searchLabel" class="search-red"></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+                                <thead>
+                                    <tr>
+                                        <th ng-click="vm.sortAdmins('name')">Admin</th>
+                                        <th ng-click="vm.sortAdmins('email')">Email</th>
+                                        <th ng-click="vm.sortAdmins('lastlogin')">Last Login</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="admin in vm.admins" ng-class="{'footable-even':$even,'footable-odd':$odd}">
+                                        <td ng-bind="admin.adminName" class="footable-visible"></td>
+                                        <td ng-bind="admin.email"></td>
+                                        <td ng-bind="admin.lastLogin"></td>
+                                        <td>
+                                            <div class="col-md-6 col-sm-6">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <i class="fa fa-trash"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

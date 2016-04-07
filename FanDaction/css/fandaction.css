@@ -1,0 +1,38 @@
+﻿.rowspacer { height: 1.5em; }
+.sport-icon { width: 2em; height: auto; }
+
+.navbar-brand {
+  padding: 0px !important;
+}
+.navbar-brand>img {
+  height: 100%;
+  width: auto;
+}
+
+a.btn-lobby-lg { color: #fff; text-decoration: none; }
+
+.btn-lobby-lg {
+    display: inline-block;
+    padding: 12px 6px;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    border-radius: 10px; 
+    border: 8px solid #e7eaec;
+    background: #2d2d2d;
+    background-image: none;
+    min-width: 320px;
+    text-transform: uppercase;
+
+}
+
+a.btn-lobby-lg:hover { background: #fff; text-decoration: none; color: #2d2d2d; }
+
+.sm-icon { width: 3.2em; height: auto; }

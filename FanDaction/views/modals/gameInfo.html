@@ -1,0 +1,46 @@
+﻿<div class="inmodal" id="shopModal">
+    <div class="modal-header">
+        <h4 class="modal-title" ng-bind="vm.modalTitle"></h4>
+        <small class="font-bold"></small>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <ul class="game-info">
+                <li>Entry Fee: <span ng-bind="game.fee"></span></li>
+                <li ng-bind="game.salaryCap"></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs navs-3">
+                    <li ng-class="{active: tab1}">
+                        <a ng-click="tab1 = true; tab2 = false; tab3 = false" ng-init="tab1 = true">
+                            Contest
+                        </a>
+                    </li>
+                    <li ng-class="{active: tab1}">
+                        <a ng-click="tab1 = false; tab2 = true; tab3 = false" ng-init="tab2 = true">
+                            Entries
+                        </a>
+                    </li>
+                    <li ng-class="{active: tab1}">
+                        <a ng-click="tab1 = false; tab2 = false; tab3 = true" ng-init="tab3 = true">
+                            Prizes
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" ng-class="{active: tab1}">
+                        <ul class="game-info-list">
+                            <li><strong><span ng-bind="game.teamHome"></span> @ <span ng-bind="game.teamVisit"></span></strong> <span ng-bind="game.gameTime"></span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" ng-class="{active: tab2}">
+
+                    </div>
+                    <div class="tab-pane" ng-class="{active: tab3}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

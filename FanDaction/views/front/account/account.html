@@ -1,0 +1,105 @@
+﻿<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Tabs</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a>UI Elements</a>
+            </li>
+            <li class="active">
+                <strong>Tabs</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeIn">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="tabs-container">
+
+                <uib-tabset>
+                    <uib-tab heading="Overview">
+                    </uib-tab>
+                    <uib-tab heading="Cashier">
+                    </uib-tab>
+                    <uib-tab heading="Transactions">
+                    </uib-tab>
+                    <uib-tab heading="Refer a Friend">
+                    </uib-tab>
+                    <uib-tab heading="Affiliates">
+                    </uib-tab>
+                    <uib-tab heading="About Me">
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="genAccountInfo">
+            <div id="welcomeMsg" ng-bind="vm.welcomeMsg"></div>
+            <div id="successDepMsg" ng-bind="vm.successDepMsg"></div>
+            <div id="errDepMsg" ng-bind="vm.errorDepMsg"></div>
+        </div>
+        <div id="avatarContainer">
+            <div id="Username">
+                <span ng-bind="vm.account.userName"></span>
+            </div>
+        </div>
+        <div ng-show="!vm.account.avatar" id="upload_area">
+            <div id="UserName">
+                <span>{USERNAME}</span>
+            </div>
+            <form action="#" class="dropzone" dropzone="" id="dropzone">
+                <div class="dz-message m-t-lg m-b-lg">
+                    <h1>Drop avatar image here.</h1>
+                    
+                </div>
+            </form>
+        </div>
+        <div ng-show="vm.account.avatar">
+            <img src="/images/avatars/{{vm.account.avatar}}" class="img-responsive" />
+            <form action="#" class="dropzone" dropzone="" id="dropzone">
+                <div class="dz-message m-t-lg m-b-lg">
+                    <h1>Drop avatar image here to change it.</h1>
+                </div>
+            </form>
+        </div>
+        <div id="genInfoContainer">
+            <div id="overview">
+                <span ng-bind="vm.account.userName"></span>
+                <table id="users">
+                    <tr><td>Username:</td><td ng-bind="vm.account.userName"></td></tr>
+                    <tr>
+                        <td>Balance:</td><td ng-bind="vm.account.balance"></td>
+                        <td>Deposit Bonus:</td><td ng-bind="vm.account.depositBonus"></td>
+                    </tr>
+                    <tr>
+                        <td>Credit Line:</td><td ng-bind="vm.account.creditLine"></td>
+                        <td>Bonus Released:</td><td ng-bind="vm.account.releasedBonus"></td>
+                    </tr>
+                    <tr>
+                        <td>Available Balance:</td><td ng-bind="vm.account.availableBalance"></td>
+                        <td>Next Bonus Release:</td><td ng-bind="vm.account.nextBonusRelease"></td>
+                    </tr>
+                    <tr>
+                        <td>Pending Contests:</td><td ng-bind="vm.account.pendingContests"></td>
+                        <td>Release Amount:</td><td ng-bind="vm.account.releasedAmount"></td>
+                    </tr>
+                    <tr>
+                        <td>Current FantaStock:</td><td ng-bind="vm.account.fantastock"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Lifetime FantaStock:</td><td ng-bind="vm.account.totalFantastock"></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

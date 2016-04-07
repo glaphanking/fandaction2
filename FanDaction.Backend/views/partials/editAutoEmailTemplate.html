@@ -1,0 +1,106 @@
+﻿<div id="ShowAutoEmail">
+    <form id="AutoEmailInformationForm" name="AutoEmailInformationForm" method="post" action="javascript:AutoEmailControl('update','{PARAMETER}','','false');">
+        <p>
+            <span>Word 1:&nbsp;</span>
+            <span>
+                <select name="reservedword1" id="reservedword1">
+                    <option value="{RESERVEDWORD1}">{RESERVEDWORD1}</option>
+                    <option value="PlayFootball">Play Football</option>
+                    <option value="CreateAccount">Create Account</option>
+                    <option value="PlayFreeGames">Play Free Games</option>
+                    <option value="Deposit">Deposit</option>
+                    <option value="PlayPaidGames">Play Paid Games</option>
+                    <option value="All">All</option>
+                </select>
+            </span>
+        </p>
+        <div class="clear"></div>
+        <p>
+            <span>Word 2:&nbsp;</span>
+            <span>
+                <select name="reservedword2" id="reservedword2">
+                    <option value="{RESERVEDWORD2}">{RESERVEDWORD2}</option>
+                    <option value="NotPlayThisWeek">Not Play this Week</option>
+                    <option value="NoLogin">No Login</option>
+                    <option value="NoDeposit">No Deposit</option>
+                    <option value="NoRe-Deposit">No Re-Deposit</option>
+                    <option value="All">All</option>
+                </select>
+            </span>
+        </p>
+        <div class="clear"></div>
+        <p><span>Days:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span><input type="text" name="cycle" value="{CYCLE}" size="25" /></span></p>
+        <div class="clear"></div>
+        <p><span>Token:&nbsp;&nbsp;&nbsp;</span><span><input type="text" name="token" value="{TOKEN}" size="25" /></span></p>
+        <div class="clear"></div>
+        <p>
+            <span>Senddate:</span><span>
+                <select name="senddate" id="senddate">
+                    <option value="{SENDDATE}">{SHOWSENDDATE}</option>
+                    <option value="2">Monday</option>
+                    <option value="3">Tuesday</option>
+                    <option value="4">Wednesday</option>
+                    <option value="5">Thursday</option>
+                    <option value="6">Friday</option>
+                    <option value="7">Saturday</option>
+                    <option value="1">Sunday</option>
+                </select>
+                <select name="sendtime" id="sendtime">
+                    <option value="{SENDTIME}">{SENDTIME} hrs</option>
+                    <option value="0">0 hrs</option>
+                    <option value="1">1 hrs</option>
+                    <option value="2">2 hrs</option>
+                    <option value="3">3 hrs</option>
+                    <option value="4">4 hrs</option>
+                    <option value="5">5 hrs</option>
+                    <option value="6">6 hrs</option>
+                    <option value="7">7 hrs</option>
+                    <option value="8">8 hrs</option>
+                    <option value="9">9 hrs</option>
+                    <option value="10">10 hrs</option>
+                    <option value="11">11 hrs</option>
+                    <option value="12">12 hrs</option>
+                    <option value="13">13 hrs</option>
+                    <option value="14">14 hrs</option>
+                    <option value="15">15 hrs</option>
+                    <option value="16">16 hrs</option>
+                    <option value="17">17 hrs</option>
+                    <option value="18">18 hrs</option>
+                    <option value="19">19 hrs</option>
+                    <option value="20">20 hrs</option>
+                    <option value="21">21 hrs</option>
+                    <option value="22">22 hrs</option>
+                    <option value="23">23 hrs</option>
+                </select>
+        </p>
+        <p>
+            <span>Startdate:</span><span><input type="text" id="startdate" name="startdate" value="{START_DATE}" /><img id="timepicker_start" src="{IMAGE_PATH}/timeicon.png" alt="Date - Time Picker" /></span>
+            <div id="StartTimePicker">
+                <script type="text/javascript" id="startdate_timer" class="evaluableoncallback">
+				//<![CDATA[
+				var StartDateTimer  = new  Zapatec.Calendar({
+				lang             : "en",
+				theme             : "forest",
+				showEffectSpeed   : 10,
+				hideEffectSpeed   : 10,
+				weekNumbers       : false,
+				showOthers        : true,
+				showsTime         : true,
+				timeFormat        : "12",
+				electric          : false,
+				inputField        : "startdate",
+				button            : "timepicker_start",
+				ifFormat          : "%m/%d/%Y",
+				daFormat          : "%Y/%m/%d",
+				timeInterval          : 05
+				});
+				//]]>
+                </script>
+            </div>
+        </p>
+        <div class="clear"></div>
+        <p><span><input type="hidden" name="enab" value="{ENABLE}" /></span></p>
+        <div class="clear"></div>
+        <p><input type="image" src="{IMAGE_PATH}/accepticon.png" title="Accept" name="SubmitButton" /></p>
+    </form>
+</div>

@@ -1,0 +1,85 @@
+﻿<form>
+    <fieldset>
+        <div class="inmodal" id="editSettingModal">
+            <div class="modal-header">
+                <h4 class="modal-title" ng-bind="modalTitle"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtName">Name</label>
+                            <input id="txtName" ng-model="setting.name" name="txtName" type="text" placeholder="Name" class="form-control input-md">
+                            <span class="help-block">Enter Setting Name</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtDesc">Description</label>
+                            <input id="txtDesc" ng-model="setting.description" name="txtDesc" type="text" placeholder="Description" class="form-control input-md">
+                            <span class="help-block">Enter Setting Description</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtBS">Banned States</label>
+                            <input id="txtBS" ng-model="setting.bannedStates" name="txtBS" type="text" placeholder="states" class="form-control input-md">
+                            <span class="help-block">Enter Banned states separated by comma ( , )</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtAM">Auth Model</label>
+                            <input id="txtAM" ng-model="setting.authmodel" name="txtAM" type="text" placeholder="auth" class="form-control input-md">
+                            <span class="help-block">Enter Auth Model</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtUser">Auth User</label>
+                            <input id="txtUser" ng-model="setting.username" name="txtUser" type="text" placeholder="username" class="form-control input-md">
+                            <span class="help-block">Enter Auth Username</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtPass">Auth Pass</label>
+                            <input id="txtPass" ng-model="setting.authpassword" name="txtPass" type="text" placeholder="password" class="form-control input-md">
+                            <span class="help-block">Enter Auth Pass</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtPaypal">PayPal Token</label>
+                            <input id="txtPaypal" ng-model="setting.paypaltoken" name="txtPaypal" type="text" placeholder="token" class="form-control input-md">
+                            <span class="help-block">Enter Paypal Token</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="txtFSF">FantasStock Factor</label>
+                            <input id="txtFSF" ng-model="setting.paypaltoken" name="txtFSF" type="text" placeholder="0" class="form-control input-md">
+                            <span class="help-block">Enter Fantastock Factor 1 - 10</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rowspacer">&nbsp;</div>
+                <div class="col-sm-2"><i class="fa fa-check fa-2x"></i></div>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,152 @@
+﻿<div class="wrapper wrapper-content  animated fadeInRight" ng-controller="lobbyCtlr as vm">
+    <div class="row">
+        <div class="col-sm-12 fa-ads">
+            <ul class="list-inline">
+                <li><img src="/images/lobby/1.jpg" class="img-responsive" /></li>
+                <li><img src="/images/lobby/4.jpg" class="img-responsive" /></li>
+                <li><img src="/images/lobby/3.jpg" class="img-responsive" /></li>
+            </ul>
+        </div>
+    </div>
+    <div class="refer-section row">
+        <div class="col-sm-12">
+            <div class="col-sm-6 text-center">
+                <a class="btn-lobby-lg" href="#" role="button">Create Contest</a>
+            </div>
+            <div class="col-sm-6 text-center">
+                <a class="btn-lobby-lg" href="#" role="button">Affiliates</a>
+            </div>
+        </div>
+    </div>
+    <div class="lobby-section">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-6">
+                    <div class="panel panel-default panel-trans">
+                        <div class="panel-heading">Sport</div>
+                        <div class="panel-body">
+                            <div class="btn-group">
+                                <label class="btn btn-default" ng-model="sportFilter.all" uib-btn-checkbox>All</label>
+                                <label class="btn btn-default" ng-model="sportFilter.nfl;" uib-btn-checkbox><img src="/images/icons/football.png" class="sm-icon" /><br/>NFL</label>
+                                <label class="btn btn-default" ng-model="sportFilter.nba" uib-btn-checkbox><img src="/images/icons/basketball.png" /><br/>NBA</label>
+                                <label class="btn btn-default" ng-model="sportFilter.mlb" uib-btn-checkbox><img src="/images/icons/baseball.png" /><br/>MLB</label>
+                                <label class="btn btn-default" ng-model="sportFilter.cfb" uib-btn-checkbox>CFB</label>
+                                
+                                <label class="btn btn-default" ng-model="sportFilter.cbb" uib-btn-checkbox>CBB</label>
+                                
+                                <label class="btn btn-default" ng-model="sportFilter.nhl" uib-btn-checkbox>NHL</label>
+                                <label class="btn btn-default" ng-model="sportFilter.pga" uib-btn-checkbox>PGA</label>
+                                <label class="btn btn-default" ng-model="sportFilter.nascar" uib-btn-checkbox>NASCAR</label>
+                                <label class="btn btn-default" ng-model="sportFilter.horses" uib-btn-checkbox>Horses</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lobby-filters">
+            <div class="row">
+                <div class="col-sm-6 filters-left">
+                    <div class="filters-left-content">
+                        <h3>Sport</h3>
+                        
+
+                        <div class="filter-options">
+                            <a ng-click="sportFilter.all"><small>Clear All</small></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 filters-right" id="filters">
+                    <div class="fa-filters-right">
+
+                        <div class="btn-group">
+                            <h3>Start Time</h3>
+                            <label type="button" class="btn btn-default" ng-model="startTime" uib-btn-radio="'All'">All</label>
+                            <label type="button" class="btn btn-default" ng-model="startTime" uib-btn-radio="'Next'">Next Start</label>
+                            <label type="button" class="btn btn-default" ng-model="startTime" uib-btn-radio="'Today'">Today</label>
+                        </div>
+
+                        <div class="btn-group">
+                            <h3>Sizes</h3>
+                            <label class="btn btn-default" ng-model="sizeFilter.two" uib-btn-checkbox>2</label>
+                            <label class="btn btn-default" ng-model="sizeFilter.six" uib-btn-checkbox>3-6</label>
+                            <label class="btn btn-default" ng-model="sizeFilter.ten" uib-btn-checkbox>7-10</label>
+                            <label class="btn btn-default" ng-model="sizeFilter.twn" uib-btn-checkbox>11-20</label>
+                            <label class="btn btn-default" ng-model="sizeFilter.more" uib-btn-checkbox>21+</label>
+                        </div>
+
+                        <div class="btn-group">
+                            <h3>Entry Fee</h3>
+                            <label class="btn btn-default" ng-model="entryFee.free" uib-btn-checkbox>Free</label>
+                            <label class="btn btn-default" ng-model="entryFee.one" uib-btn-checkbox>$1 - $5</label>
+                            <label class="btn btn-default" ng-model="entryFee.ten" uib-btn-checkbox>$6 - $20</label>
+                            <label class="btn btn-default" ng-model="entryFee.twn" uib-btn-checkbox>$21 - $50</label>
+                            <label class="btn btn-default" ng-model="entryFee.fit" uib-btn-checkbox>$51 - $109</label>
+                            <label class="btn btn-default" ng-model="entryFee.more" uib-btn-checkbox>$110+</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <div class="col-sm-12">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('',vm.BAR)" value="All">All</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('league',vm.BAR)" value="League">League</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('h2h',vm.BAR)" value="IsH2h">Challenges</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('50-50',vm.BAR)" value="IsFiftyFifty">50/50</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('pick',vm.BAR)" value="IsH2h">Pick 5</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('challenge',vm.BAR)" value="challenge">Pick 10</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('salary',vm.BAR)" value="Salary">Salary</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('salary',vm.BAR)" value="1st/2ndHalf">1st/2nd</button>
+                        <button type="button" class="btn btn-default" ng-click="filterPrizeMode('salary',vm.BAR)" value="Free">Free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rowspacer">&nbsp;</div>
+        
+        <div id="lobby-table">
+            <div class="row">
+                <div class="col-sm-10">
+                    <uib-accordion close-others="oneAtATime">
+                        <uib-accordion-group is-open="status.open">
+                            <uib-accordion-heading>
+                                <img src="/images/icons/baseball.png" class="sport-icon" /> <span>MLB</span> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                            </uib-accordion-heading>
+                            <table class="rowgrid footable table table-stripped toggle-arrow-tiny">
+                                <thead>
+                                    <tr>
+                                        <th data-toggle="true">Contest</th>
+                                        <th data-toggle="true">Entries</th>
+                                        <th data-toggle="true">Size</th>
+                                        <th data-toggle="true">Fee</th>
+                                        <th data-toggle="true">Prizes</th>
+                                        <th data-toggle="true">Live In</th>
+                                        <th>Enter</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="game in vm.games">
+                                        <td ng-bind="contest">Pick 5</td>
+                                        <td ng-bind="game.entries"></td>
+                                        <td ng-bind="game.size"></td>
+                                        <td ng-bind="game.fee"></td>
+                                        <td ng-bind="game.prizes"></td>
+                                        <td ng-bind="game.live"></td>
+                                        <td><i class="fa fa-check fa-2x"></i></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </uib-accordion-group>
+                    </uib-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
