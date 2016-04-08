@@ -1,0 +1,37 @@
+﻿<table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+    <thead>
+        <tr>
+            <th>Bonus Name</th>
+            <th>Description</th>
+            <th>Promo Code</th>
+            <th>Enable</th>
+            <th ng-class="vm.permissionGrade">Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="bonus in vm.bonuses">
+            <td ng-bind="bonus.bonusName"></td>
+            <td ng-bind="bonus.description"></td>
+            <td ng-bind="bonus.promoCode"></td>
+            <td>
+                <i class="fa fa-pencil fa-2x"></i>  <i class="fa fa-trash fa-2x"></i>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <form id="BonusAddInformationForm" name="BonusAddInformationForm" method="post">
+                    <table>
+                        <tr>
+                            <td><span>Bonus Name:</span><span><input type="text" name="newBonusName" /></span></td>
+                            <td><span>Description:</span><span><input type="text" name="description" /></span></td>
+                            <td><span>Promo Code:</span><span><input type="text" name="promocode" /></span></td>
+                            <td><i class="fa fa-plus-circle"></i></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </tfoot>
+</table>
