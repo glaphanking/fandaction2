@@ -44,21 +44,21 @@ namespace FanDaction.Data
             #endregion
 
             #region Admins
-            //List<Admin> admins = new List<Admin>();
-            //var a = context.Set<Admin>().Add(new Admin()
-            //{
-            //    AdminName = "HHill99",
-            //    IsAdmin = true,
-            //    CanDelete = true,
-            //    CanGrade = true,
-            //    CanSeeCreditCards = true,
-            //    CanSeeEmails = true,
-            //    Password = "propane",
-            //    CreateDate = DateTime.Today,
-            //    Email = "hhill@stricklandpropane.com"
-            //});
+            List<Admin> admins = new List<Admin>();
+            var a = context.Set<Admin>().Add(new Admin()
+            {
+                AdminName = "HHill99",
+                IsAdmin = true,
+                CanDelete = true,
+                CanGrade = true,
+                CanSeeCreditCards = true,
+                CanSeeEmails = true,
+                Password = "propane",
+                CreateDate = DateTime.Today,
+                Email = "hhill@stricklandpropane.com"
+            });
 
-            //admins.Add(a);
+            admins.Add(a);
 
             #endregion
 

@@ -58,7 +58,9 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="admins\adminCtlr.js" />
     <Content Include="admins\adminsList.html" />
+    <Content Include="app\css\admin.css" />
     <Content Include="app\css\animate.css" />
     <Content Include="app\css\bootstrap.css" />
     <Content Include="app\css\bootstrap.css.map" />
@@ -920,6 +922,7 @@
     <Content Include="app\js\default.js" />
     <Content Include="app\js\directives.js" />
     <Content Include="app\js\environment.js" />
+    <Content Include="app\js\filters.js" />
     <Content Include="app\js\inspinia.js" />
     <Content Include="app\js\jquery\jquery-2.1.1.min.js" />
     <Content Include="app\js\jquery\jquery-ui-1.10.4.min.js" />

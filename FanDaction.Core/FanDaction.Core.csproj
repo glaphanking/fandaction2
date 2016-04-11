@@ -68,6 +68,7 @@
     <Compile Include="Models\UserRefer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueTypes\PayMethod.cs" />
+    <Compile Include="ViewModels\AdminListVM.cs" />
     <Compile Include="ViewModels\AdminVM.cs" />
     <Compile Include="ViewModels\AutoEmailVM.cs" />
     <Compile Include="ViewModels\CategoryListVM.cs" />

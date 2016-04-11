@@ -22,6 +22,7 @@ namespace FanDaction.Data
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Configurations.Add(new AdminMap());
             modelBuilder.Configurations.Add(new SettingsMap());
             modelBuilder.Configurations.Add(new CategoriesMap());
         }

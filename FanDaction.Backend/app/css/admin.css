@@ -1,0 +1,9 @@
+﻿#page {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+
+#adminList {
+    font-size: 1em;
+}

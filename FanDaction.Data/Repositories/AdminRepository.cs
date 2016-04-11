@@ -23,7 +23,7 @@ namespace FanDaction.Data.Repositories
         public IQueryable<AdminVM> GetAdmins(string letter = null)
         {
             var admins = Context.Set<Admin>().AsQueryable();
-
+            
             if (!string.IsNullOrWhiteSpace(letter)) admins = admins.Where(a => a.AdminName.StartsWith(letter));
 
             var q = from a in admins
@@ -38,10 +38,18 @@ namespace FanDaction.Data.Repositories
                         CanSeeEmails = a.CanSeeEmails,
                         Email = a.Email,
                         IsAdmin = a.IsAdmin,
-                        LastLogin = (DateTime)a.LastLogin
+                        LastLogin = (DateTime?)a.LastLogin ?? DateTime.MinValue
                     };
 
             return q;
+        }
+    }
+
+    public class AdminMap : EntityTypeConfiguration<Admin>
+    {
+        public AdminMap()
+        {
+            ToTable("Admin");
         }
     }
 }

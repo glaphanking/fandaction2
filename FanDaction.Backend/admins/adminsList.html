@@ -21,7 +21,7 @@
     </div>
 
     <div class="wrapper wrapper-content">
-        <div class="animated fadeInRight" ng-controller="adminListCtrl as vm">
+        <div class="animated fadeInRight" ng-controller="adminCtlr as vm">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="ibox-title">
@@ -75,12 +75,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
+                            <table id="adminList" class="footable table table-stripped toggle-arrow-tiny" data-page-size="8">
                                 <thead>
                                     <tr>
                                         <th ng-click="vm.sortAdmins('name')">Admin</th>
                                         <th ng-click="vm.sortAdmins('email')">Email</th>
                                         <th ng-click="vm.sortAdmins('lastlogin')">Last Login</th>
+                                        <th ng-click="vm.sortAdmins('canDelete')">Delete</th>
+                                        <th ng-click="vm.sortAdmins('canEdit')">Edit</th>
+                                        <th ng-click="vm.sortAdmins('canSeeCreditCards')">CC View</th>
+                                        <th ng-click="vm.sortAdmins('canSeeEmails')">Emails</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -88,17 +92,38 @@
                                     <tr ng-repeat="admin in vm.admins" ng-class="{'footable-even':$even,'footable-odd':$odd}">
                                         <td ng-bind="admin.adminName" class="footable-visible"></td>
                                         <td ng-bind="admin.email"></td>
-                                        <td ng-bind="admin.lastLogin"></td>
+                                        <td>{{admin.lastLogin | date:"MM/dd/yyyy h:mma"}}</td>
+                                        <td>{{admin.canDelete | yesNo}}</td>
+                                        <td>{{admin.canEdit | yesNo}}</td>
+                                        <td>{{admin.canSeeCreditCards | yesNo}}</td>
+                                        <td>{{admin.canSeeEmails | yesNo}}</td>
                                         <td>
                                             <div class="col-md-6 col-sm-6">
-                                                <i class="fa fa-pencil"></i>
+                                                <i class="fa fa-pencil fa-2x"></i>
                                             </div>
                                             <div class="col-md-6 col-sm-6">
-                                                <i class="fa fa-trash"></i>
+                                                <i class="fa fa-trash fa-2x"></i>
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
+                                <tfoot ng-hide="permissions.canEdit">
+                                    <tr>
+                                        <td colspan="4">
+                                            <form class="form-inline" >
+                                                <div class="form-group">
+                                                    <label for="exampleInputName2">Admine Name:</label>
+                                                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail2">Password:</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                                </div>
+                                                <button type="submit" class="btn btn-default">Send invitation</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>

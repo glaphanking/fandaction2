@@ -15,6 +15,7 @@ namespace FanDaction.Data
     }
     public interface IFandDataAccess : IUnitOfWork
     {
+        IAdminRepository Admins { get; }
         ICategoryRepository Categories { get; }
         ISettingsRepository Settings { get;  }
         IAutoEmailRepository Emails { get;  }

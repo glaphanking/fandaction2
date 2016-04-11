@@ -202,6 +202,7 @@
     <Compile Include="Configuration\FanDactionApiConfig.cs" />
     <Compile Include="Configuration\FormatterConfig.cs" />
     <Compile Include="Configuration\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AutoEmailController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\InfoController.cs" />

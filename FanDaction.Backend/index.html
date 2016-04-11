@@ -25,53 +25,57 @@
     <!-- Main Inspinia CSS files -->
     <link href="/app/css/animate.css" rel="stylesheet" />
     <link id="loadBefore" href="app/css/style.css" rel="stylesheet" />
+    <link id="loadBefore" href="app/css/admin.css" rel="stylesheet" />
 
 
 </head>
 
 <!-- ControllerAs syntax -->
 <!-- Main controller with serveral data used in Inspinia theme on diferent view -->
-<body ng-controller="MainCtrl as main">
+<body ng-controller="MainCtrl as main" class="{{$state.current.data.specialClass}}" landing-scrollspy id="page-top">
 
-<!-- Main view  -->
-<div ui-view></div>
+    <!-- Main view  -->
+    <div ui-view></div>
 
     <script src="app/js/environment.js"></script>
 
-<!-- jQuery and Bootstrap -->
-<script src="/app/js/jquery/jquery-2.1.1.min.js"></script>
-<script src="/app/js/plugins/jquery-ui/jquery-ui.js"></script>
-<script src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <!-- jQuery and Bootstrap -->
+    <script src="/app/js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="/app/js/plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="/app/js/bootstrap/bootstrap.min.js"></script>
 
-<!-- MetsiMenu -->
-<script src="/app/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <!-- MetsiMenu -->
+    <script src="/app/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
-<!-- SlimScroll -->
-<script src="/app/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="/app/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-<!-- Peace JS -->
-<script src="/app/js/plugins/pace/pace.min.js"></script>
+    <!-- Peace JS -->
+    <script src="/app/js/plugins/pace/pace.min.js"></script>
 
-<!-- Custom and plugin javascript -->
-<script src="/app/js/inspinia.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="/app/js/inspinia.js"></script>
 
-<!-- Main Angular scripts-->
-<script src="/app/js/angular/angular.min.js"></script>
-<script src="/app/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
-<script src="/app/js/ui-router/angular-ui-router.min.js"></script>
-<script src="/app/js/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
+    <!-- Main Angular scripts-->
+    <script src="/app/js/angular/angular.min.js"></script>
+    <script src="/app/js/plugins/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="/app/js/ui-router/angular-ui-router.min.js"></script>
+    <script src="/app/js/bootstrap/ui-bootstrap-tpls-1.1.2.min.js"></script>
 
-<!-- Controllers -->
-<script src="/bonus/bonusCtlr.js"></script>
-<script src="/categories/categoryListCtlr.js"></script>
-<script src="/settings/settingsCtlr.js"></script>
+    <!-- Controllers -->
+    <script src="admins/adminCtlr.js"></script>
+    <script src="/bonus/bonusCtlr.js"></script>
+    <script src="/categories/categoryListCtlr.js"></script>
+    <script src="/settings/settingsCtlr.js"></script>
 
 
-<!-- Anglar App Script -->
-<script src="/app/js/app.js"></script>
-<script src="/app/js/config.js"></script>
-<script src="/app/js/directives.js"></script>
-<script src="/app/js/controllers.js"></script>
+    <!-- Anglar App Script -->
+    <script src="/app/js/app.js"></script>
+    <script src="/app/js/config.js"></script>
+    <script src="/app/js/directives.js"></script>
+    <script src="/app/js/controllers.js"></script>
+    <script src="/app/js/filters.js"></script>
+    <script src="/services/adminService.js"></script>
 
 </body>
 </html>
